@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSmile, faBriefcaseMedical, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
+import { faSmile, faBriefcaseMedical, faSkullCrossbones, faAmbulance } from '@fortawesome/free-solid-svg-icons'
 import NumberFormat from 'react-number-format';
 import { fetchData } from './api'
 
@@ -68,6 +68,23 @@ const Cards = (props) => {
 
 
                                     <NumberFormat value={dailyData.deaths} displayType={'text'} thousandSeparator={true} />
+
+                                </h6>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card bgConfirmedCard" style={{ width: "100%", textAlign: "center", padding: "20px 0" }}>
+                            <div style={{ fontSize: 34, color: "red" }}>
+                                <FontAwesomeIcon icon={faAmbulance} size={"2x"} />
+                            </div>
+                            <div className="card-body">
+                                <h5 className="card-title">Total Today Cases</h5>
+                                <h6 className="card-subtitle mb-2 text-muted">
+
+
+                                    <NumberFormat value={dailyData.todayCases} displayType={'text'} thousandSeparator={true} />
 
                                 </h6>
 
