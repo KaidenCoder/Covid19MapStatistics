@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchDataChangeable } from './api'
 import { Bar } from 'react-chartjs-2'
+import NumberFormat from 'react-number-format';
 
 const BarChart = (props) => {
     const [dailyData, setDailyData] = useState([])
@@ -82,9 +83,9 @@ const BarChart = (props) => {
                 <tbody>
                     <tr>
                         <th scope="row" style={{ color: 'green' }}>Data</th>
-                        <td style={{ color: 'red' }}>{props.data.confirmed} </td>
-                        <td style={{ color: 'orange' }}>{props.data.recovered} </td>
-                        <td>{props.data.deaths}</td>
+                        <td style={{ color: 'red' }}><NumberFormat value={props.data.confirmed} displayType={'text'} thousandSeparator={true} /> </td>
+                        <td style={{ color: 'orange' }}><NumberFormat value={props.data.recovered} displayType={'text'} thousandSeparator={true} /> </td>
+                        <td><NumberFormat value={props.data.deaths} displayType={'text'} thousandSeparator={true} /> </td>
                     </tr>
                 </tbody>
             </table>
