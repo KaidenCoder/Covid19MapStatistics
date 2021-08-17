@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchContinentData } from './api'
+import { fetchContinentData } from './utils/api'
 import { Line } from 'react-chartjs-2'
 import NumberFormat from 'react-number-format';
 
@@ -11,7 +11,6 @@ const ChartContinent = () => {
             const data = await fetchContinentData()
             setDailyData(data)
         }
-        console.log(dailyData)
         fetchCAPI()
     }, [])
 
@@ -23,53 +22,49 @@ const ChartContinent = () => {
                     datasets: [
                         {
                             data: dailyData.map(({ cases }) => cases),
-                            label: 'Active',
+                            label: 'Confirmed',
                             borderColor: 'red',
                             fill: true
                         }, {
                             data: dailyData.map(({ recovered }) => recovered),
                             label: 'Recovered',
-                            borderColor: 'orange',
+                            borderColor: 'green',
                             fill: true
                         }, {
                             data: dailyData.map(({ deaths }) => deaths),
                             label: 'Deaths',
-                            borderColor: 'black',
+                            borderColor: 'blue',
                             fill: true
                         }]
                 }}
-
             />) :
             "Loading"
     )
 
     return (
         <div className="linechart">
-            <h3 style={{ padding: "20px 0", textAlign: "center" }}>Covid-19 Continent Stats</h3>
-
-            <table class="table">
+            <h3 style={{ padding: "20px 0", textAlign: "center" }}>Continent Tabular Data</h3>
+            <table className="table">
                 <thead>
                     <tr>
-
-                        <th scope="col" style={{ color: 'green' }}>Continent</th>
-                        <th scope="col" style={{ color: 'red' }}>Confirmed</th>
-                        <th scope="col" style={{ color: 'orange' }}>Recovered</th>
-                        <th scope="col">Deaths</th>
+                        <th scope="col" style={{ background: 'rgba(0,0,0,0.05)', color: 'black', border: "1px solid black" }}>Continent</th>
+                        <th scope="col" style={{ background: 'rgba(255,0,0,0.05)', color: 'red', border: "1px solid black" }}>Confirmed</th>
+                        <th scope="col" style={{ background: 'rgba(0,255,0,0.05)', color: 'green', border: "1px solid black" }}>Recovered</th>
+                        <th scope="col" style={{ background: 'rgba(0,0,255,0.05)', color: 'blue', border: "1px solid black" }}>Deaths</th>
                     </tr>
                 </thead>
                 {dailyData.map((d, i) => (
                     <tbody key={i}>
                         <tr>
-
-                            <td style={{ color: 'green' }}>  {d.continent}  </td>
-                            <td style={{ color: 'red' }}><NumberFormat value={d.cases} displayType={'text'} thousandSeparator={true} /> </td>
-                            <td style={{ color: 'orange' }}><NumberFormat value={d.recovered} displayType={'text'} thousandSeparator={true} /> </td>
-                            <td><NumberFormat value={d.deaths} displayType={'text'} thousandSeparator={true} /></td>
+                            <td style={{ color: 'black', border: "1px solid black" }}>  {d.continent}  </td>
+                            <td style={{ color: 'red', border: "1px solid black" }}><NumberFormat value={d.cases} displayType={'text'} thousandSeparator={true} /> </td>
+                            <td style={{ color: 'green', border: "1px solid black" }}><NumberFormat value={d.recovered} displayType={'text'} thousandSeparator={true} /> </td>
+                            <td style={{ color: 'blue', border: "1px solid black" }}><NumberFormat value={d.deaths} displayType={'text'} thousandSeparator={true} /></td>
                         </tr>
                     </tbody>
                 ))}
             </table>
-            <h3 style={{ padding: "20px 0", textAlign: "center" }}>Covid-19 Continent Line Graph</h3>
+            <h3 style={{ padding: "20px 0", textAlign: "center" }}>Line Graph data</h3>
             {lineChart}
         </div>
     )

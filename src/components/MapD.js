@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { fetchCountriesData } from './api'
+import { fetchCountriesData } from './utils/api'
 import NumberFormat from 'react-number-format';
 
 function MapD() {

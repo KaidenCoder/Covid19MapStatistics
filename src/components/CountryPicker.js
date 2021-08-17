@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { fetchCountriesData } from './api'
+import { fetchCountriesData } from './utils/api'
 
 const CountryPicker = ({ handleCountryChange }) => {
     const [countryData, setCountryData] = useState([])

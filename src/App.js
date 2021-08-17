@@ -1,13 +1,15 @@
 import './App.css';
 import React from 'react';
 import CoronaImage from './CoronaImage.png'
-import { fetchDataChangeable } from './api'
-import Cards from './Cards';
-import MapD from './MapD';
-import ChartContinent from './ChartContinent';
-import CountryPicker from './CountryPicker';
-import BarChart from './BarChart';
-
+import { fetchDataChangeable } from './components/utils/api'
+import Cards from './components/Cards';
+import MapD from './components/MapD';
+import ChartContinent from './components/ChartContinent';
+import CountryPicker from './components/CountryPicker';
+import BarChart from './components/BarChart';
+import Navbar from './components/Navbar';
+import { Switch, Route } from "react-router-dom"
+import Footer from './components/Footer';
 
 class App extends React.Component {
 
@@ -16,23 +18,14 @@ class App extends React.Component {
     country: ''
   }
 
-  // async componentDidMount() {
-  //   const fetchedData = await fetchData();
-  //   this.setState({ data: fetchedData })
-  //   console.log(this.state.data)
-  // }
-
   async componentDidMount() {
     const fetchedCData = await fetchDataChangeable();
     this.setState({ data: fetchedCData })
-    console.log(this.state.data)
   }
 
   handleCountryChange = async (country) => {
     const fetchedData = await fetchDataChangeable(country);
-    console.log("fetchedChange", fetchedData)
     this.setState({ data: fetchedData, country: country })
-    console.log(country)
   }
 
   render() {
@@ -40,16 +33,25 @@ class App extends React.Component {
       <div className="App">
         <div className="imgContainer">
           <img className="imageCss" src={CoronaImage} alt='Corona' />
+          <Navbar />
         </div>
-
-
-        <Cards />
-        <ChartContinent />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <BarChart data={this.state.data} country={this.state.country} />
-        <h3 style={{ padding: "20px 0", textAlign: "center" }}>Map of Covid-19 Countries</h3>
-        <MapD />
-
+        <Switch>
+          <Route exact path="/Covid19MapStatistics">
+            <Cards />
+          </Route>
+          <Route path="/Covid19MapStatistics/continent/">
+            <ChartContinent />
+          </Route>
+          <Route path="/Covid19MapStatistics/country/">
+            <CountryPicker handleCountryChange={this.handleCountryChange} />
+            <BarChart data={this.state.data} country={this.state.country} />
+          </Route>
+          <Route path="/Covid19MapStatistics/map/">
+            <h3 style={{ padding: "20px 0", textAlign: "center" }}>Map of Covid-19 Countries</h3>
+            <MapD />
+          </Route>
+        </Switch>
+        <Footer />
       </div>
     );
   }
