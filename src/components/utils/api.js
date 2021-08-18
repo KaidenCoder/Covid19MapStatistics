@@ -8,7 +8,6 @@ const url = 'https://disease.sh/v3/covid-19/all'
 export const fetchData = async () => {
     try {
         const response = await axios.get(url)
-
         const modifiedData = {
             confirmed: response.data.cases,
             recovered: response.data.recovered,
@@ -24,7 +23,6 @@ export const fetchData = async () => {
 export const fetchContinentData = async () => {
     try {
         const response = await axios.get(url1)
-        console.log(response.data)
         const modifiedData = response.data.map((dailyData) => ({
             cases: dailyData.cases,
             recovered: dailyData.recovered,
@@ -40,13 +38,11 @@ export const fetchContinentData = async () => {
 
 export const fetchDataChangeable = async (country) => {
     let changeableUrl = `${url2}/countries/India`
-
     if (country) {
         changeableUrl = `${url2}/countries/${country}`
     }
     try {
         const response = await axios.get(changeableUrl)
-        console.log("response", response.data)
         const modifiedData = {
             confirmed: response.data.cases,
             recovered: response.data.recovered,
@@ -63,7 +59,6 @@ export const fetchDataChangeable = async (country) => {
 export const fetchCountriesData = async () => {
     try {
         const response = await axios.get(url3)
-        console.log(response.data)
         const modifiedData = response.data.map((dailyData) => ({
             country: dailyData.country,
             confirmed: dailyData.cases,

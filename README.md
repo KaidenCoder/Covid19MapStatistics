@@ -1,94 +1,79 @@
+# COVID-19 MAP DASHBOARD
+
+A covid-19 web app where you can view data on continents, countries and on Map. The data is presented in a line graph, a bar graph with selector input, and you can click on the Map to get statistics of that country.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+It is a ReactJS Covid19 web app with multiples API endpoints generating data for global, continent and country. This data is representable visually on the front-end.
+
+### Screenshot
+
+![](images/image1.png)
+![](images/image2.png)
+![](images/image3.png)
+![](images/image4.png)
+
 ### Links
 
 - Live Site URL: [Live Website](https://kurosakicoder.github.io/Covid19MapStatistics/)
 
-### Screenshot
+## My process
 
-![](image1.png)
+First, I had two to parse the API using the fetch function. And then, the data are presented visually using JSX and npm libraries on the front end.
 
-![](image2.png)
+### Built with
 
-![](image3.png)
+- JSX
+- CSS
+- React JS
+- react-chartjs-2
+- leaflet
 
-![](image4.png)
+### What I learned
 
-
-## Libraries used
+I learned how to fetch multiple data using API endpoints.
 
 ```js
-    "axios": "^0.21.1",
-    "leaflet": "^1.7.1",
-    "react": "^17.0.2",
-    "react-chartjs-2": "^3.0.3",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "react-leaflet": ">=3.1.0 <3.2.0 || ^3.2.1",
-    "react-number-format": "^4.5.5",
+export const fetchDataChangeable = async (country) => {
+  let changeableUrl = `${url2}/countries/India`;
+  if (country) {
+    changeableUrl = `${url2}/countries/${country}`;
+  }
+  try {
+    const response = await axios.get(changeableUrl);
+    const modifiedData = {
+      confirmed: response.data.cases,
+      recovered: response.data.recovered,
+      deaths: response.data.deaths,
+      todayCases: response.data.todayCases,
+      country: response.data.country,
+    };
+    return modifiedData;
+  } catch (error) {}
+};
 ```
 
-## Available Scripts
+### Useful resources
 
-In the project directory, you can run:
+- [Covid Disease document](https://disease.sh/docs/)
 
-### `npm start`
+## Author
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- LinkedIn - [Khaidem Sandip Singha ](https://www.linkedin.com/in/khaidemsandip/)
+- Twitter - [@KurosakiCoder](https://twitter.com/KurosakiCoder)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Acknowledgments
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I have done this project from scratch by referencing the websites that I mentioned.
