@@ -20,10 +20,14 @@ It is a ReactJS Covid19 web app with multiples API endpoints generating data for
 
 ### Screenshot
 
-![](images/image1.png)
-![](images/image2.png)
-![](images/image3.png)
-![](images/image4.png)
+- Global page
+  ![](images/image1.png)
+- Continent page
+  ![](images/image2.png)
+- Country page
+  ![](images/image3.png)
+- Map
+  ![](images/image4.png)
 
 ### Links
 
