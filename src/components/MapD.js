@@ -7,7 +7,6 @@ function MapD() {
 
     const [countryData, setCountryData] = useState([])
 
-
     useEffect(() => {
         const fetchCountAPI = async () => {
             const data = await fetchCountriesData()
@@ -16,7 +15,7 @@ function MapD() {
 
         fetchCountAPI()
     }, [setCountryData])
-    console.log("mapd", countryData)
+
 
     return (
         <MapContainer center={[20.5937, 78.9629]} zoom={4} scrollWheelZoom={true}>

@@ -76,25 +76,3 @@ export const fetchCountriesData = async () => {
     }
 }
 
-
-export const fetchNewsCovidData = async () => {
-    try {
-        const response = await axios.get(newsapi)
-
-        const modifiedNewsData = response.data.articles.map((newsData) => ({
-            author: newsData.author,
-            content: newsData.content,
-            description: newsData.description,
-            date: newsData.publishedAt,
-            source: newsData.source.name,
-            title: newsData.title,
-            url: newsData.url,
-            image: newsData.urlToImage
-        }))
-        return modifiedNewsData
-
-    } catch (error) {
-
-    }
-}
-

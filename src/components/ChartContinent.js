@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { fetchContinentData } from './utils/api'
 import { Line } from 'react-chartjs-2'
 import NumberFormat from 'react-number-format';
-import Newscovid from './news/Newscovid';
 
 const ChartContinent = () => {
     const [dailyData, setDailyData] = useState([])
