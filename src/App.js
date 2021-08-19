@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import CoronaImage from './CoronaImage.png'
+import CoronaImage from './images/CoronaImage.png'
 import { fetchDataChangeable } from './components/utils/api'
 import Cards from './components/Cards';
 import MapD from './components/MapD';
@@ -10,6 +10,7 @@ import BarChart from './components/BarChart';
 import Navbar from './components/Navbar';
 import { Switch, Route } from "react-router-dom"
 import Footer from './components/Footer';
+import Newscovid from './components/news/Newscovid';
 
 class App extends React.Component {
 
@@ -38,6 +39,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/Covid19MapStatistics">
             <Cards />
+
           </Route>
           <Route path="/Covid19MapStatistics/continent/">
             <ChartContinent />
@@ -49,6 +51,9 @@ class App extends React.Component {
           <Route path="/Covid19MapStatistics/map/">
             <h3 style={{ padding: "20px 0", textAlign: "center" }}>Map of Covid-19 Countries</h3>
             <MapD />
+          </Route>
+          <Route path="/Covid19MapStatistics/covidnews/">
+            <Newscovid />
           </Route>
         </Switch>
         <Footer />

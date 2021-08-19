@@ -1,6 +1,6 @@
 # COVID-19 MAP DASHBOARD
 
-A covid-19 web app where you can view data on continents, countries and on Map. The data is presented in a line graph, a bar graph with selector input, and you can click on the Map to get statistics of that country.
+A covid-19 web app where you can view data on continents, countries and on Map. The data is presented in a line graph, a bar graph with selector input, and you can click on the Map to get statistics of that country. You also get the latest news on Covid on the news tab.
 
 ## Table of contents
 
@@ -16,7 +16,7 @@ A covid-19 web app where you can view data on continents, countries and on Map. 
 
 ## Overview
 
-It is a ReactJS Covid19 web app with multiples API endpoints generating data for global, continent and country. This data is representable visually on the front-end.
+It is a ReactJS Covid19 web app with multiples API endpoints generating global, continent, country, and news data. This data is representable visually on the front-end.
 
 ### Screenshot
 
@@ -28,6 +28,8 @@ It is a ReactJS Covid19 web app with multiples API endpoints generating data for
   ![](images/image3.png)
 - Map
   ![](images/image4.png)
+- News
+  ![](images/image5.png)
 
 ### Links
 

@@ -7,6 +7,7 @@ function MapD() {
 
     const [countryData, setCountryData] = useState([])
 
+
     useEffect(() => {
         const fetchCountAPI = async () => {
             const data = await fetchCountriesData()

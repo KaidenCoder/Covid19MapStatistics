@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchContinentData } from './utils/api'
 import { Line } from 'react-chartjs-2'
 import NumberFormat from 'react-number-format';
+import Newscovid from './news/Newscovid';
 
 const ChartContinent = () => {
     const [dailyData, setDailyData] = useState([])
@@ -66,6 +67,7 @@ const ChartContinent = () => {
             </table>
             <h3 style={{ padding: "20px 0", textAlign: "center" }}>Line Graph data</h3>
             {lineChart}
+
         </div>
     )
 }

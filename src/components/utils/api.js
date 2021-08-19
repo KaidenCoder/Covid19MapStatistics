@@ -4,6 +4,7 @@ const url1 = 'https://disease.sh/v3/covid-19/continents'
 const url2 = 'https://disease.sh/v3/covid-19'
 const url3 = 'https://disease.sh/v3/covid-19/countries'
 const url = 'https://disease.sh/v3/covid-19/all'
+const newsapi = `https://newsapi.org/v2/top-headlines?language=en&q=covid&apiKey=${process.env.REACT_APP_API_KEY}`
 
 export const fetchData = async () => {
     try {
@@ -74,3 +75,26 @@ export const fetchCountriesData = async () => {
 
     }
 }
+
+
+export const fetchNewsCovidData = async () => {
+    try {
+        const response = await axios.get(newsapi)
+
+        const modifiedNewsData = response.data.articles.map((newsData) => ({
+            author: newsData.author,
+            content: newsData.content,
+            description: newsData.description,
+            date: newsData.publishedAt,
+            source: newsData.source.name,
+            title: newsData.title,
+            url: newsData.url,
+            image: newsData.urlToImage
+        }))
+        return modifiedNewsData
+
+    } catch (error) {
+
+    }
+}
+
