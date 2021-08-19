@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Covid19MapStatistics/static/css/main.80c5a729.chunk.css",
-    "main.js": "/Covid19MapStatistics/static/js/main.be80d4e8.chunk.js",
-    "main.js.map": "/Covid19MapStatistics/static/js/main.be80d4e8.chunk.js.map",
-    "runtime-main.js": "/Covid19MapStatistics/static/js/runtime-main.72ff7b1b.js",
-    "runtime-main.js.map": "/Covid19MapStatistics/static/js/runtime-main.72ff7b1b.js.map",
-    "static/js/2.f4ee2e76.chunk.js": "/Covid19MapStatistics/static/js/2.f4ee2e76.chunk.js",
-    "static/js/2.f4ee2e76.chunk.js.map": "/Covid19MapStatistics/static/js/2.f4ee2e76.chunk.js.map",
-    "static/js/3.7000d841.chunk.js": "/Covid19MapStatistics/static/js/3.7000d841.chunk.js",
-    "static/js/3.7000d841.chunk.js.map": "/Covid19MapStatistics/static/js/3.7000d841.chunk.js.map",
+    "main.css": "/Covid19MapStatistics/static/css/main.aec410b2.chunk.css",
+    "main.js": "/Covid19MapStatistics/static/js/main.540ebccf.chunk.js",
+    "main.js.map": "/Covid19MapStatistics/static/js/main.540ebccf.chunk.js.map",
+    "runtime-main.js": "/Covid19MapStatistics/static/js/runtime-main.60ece46a.js",
+    "runtime-main.js.map": "/Covid19MapStatistics/static/js/runtime-main.60ece46a.js.map",
+    "static/js/2.73f60428.chunk.js": "/Covid19MapStatistics/static/js/2.73f60428.chunk.js",
+    "static/js/2.73f60428.chunk.js.map": "/Covid19MapStatistics/static/js/2.73f60428.chunk.js.map",
+    "static/js/3.dea44266.chunk.js": "/Covid19MapStatistics/static/js/3.dea44266.chunk.js",
+    "static/js/3.dea44266.chunk.js.map": "/Covid19MapStatistics/static/js/3.dea44266.chunk.js.map",
     "index.html": "/Covid19MapStatistics/index.html",
-    "static/css/main.80c5a729.chunk.css.map": "/Covid19MapStatistics/static/css/main.80c5a729.chunk.css.map",
-    "static/js/2.f4ee2e76.chunk.js.LICENSE.txt": "/Covid19MapStatistics/static/js/2.f4ee2e76.chunk.js.LICENSE.txt",
-    "static/media/CoronaImage.9e5d4fc7.png": "/Covid19MapStatistics/static/media/CoronaImage.9e5d4fc7.png"
+    "static/css/main.aec410b2.chunk.css.map": "/Covid19MapStatistics/static/css/main.aec410b2.chunk.css.map",
+    "static/js/2.73f60428.chunk.js.LICENSE.txt": "/Covid19MapStatistics/static/js/2.73f60428.chunk.js.LICENSE.txt",
+    "static/media/CoronaImage.9e5d4fc7.png": "/Covid19MapStatistics/static/media/CoronaImage.9e5d4fc7.png",
+    "static/media/noimage.b95c1842.jpeg": "/Covid19MapStatistics/static/media/noimage.b95c1842.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.72ff7b1b.js",
-    "static/js/2.f4ee2e76.chunk.js",
-    "static/css/main.80c5a729.chunk.css",
-    "static/js/main.be80d4e8.chunk.js"
+    "static/js/runtime-main.60ece46a.js",
+    "static/js/2.73f60428.chunk.js",
+    "static/css/main.aec410b2.chunk.css",
+    "static/js/main.540ebccf.chunk.js"
   ]
 }
