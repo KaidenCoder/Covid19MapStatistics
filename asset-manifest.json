@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/Covid19MapStatistics/static/css/main.aec410b2.chunk.css",
-    "main.js": "/Covid19MapStatistics/static/js/main.0f727ae2.chunk.js",
-    "main.js.map": "/Covid19MapStatistics/static/js/main.0f727ae2.chunk.js.map",
+    "main.js": "/Covid19MapStatistics/static/js/main.53e549a0.chunk.js",
+    "main.js.map": "/Covid19MapStatistics/static/js/main.53e549a0.chunk.js.map",
     "runtime-main.js": "/Covid19MapStatistics/static/js/runtime-main.60ece46a.js",
     "runtime-main.js.map": "/Covid19MapStatistics/static/js/runtime-main.60ece46a.js.map",
-    "static/js/2.73f60428.chunk.js": "/Covid19MapStatistics/static/js/2.73f60428.chunk.js",
-    "static/js/2.73f60428.chunk.js.map": "/Covid19MapStatistics/static/js/2.73f60428.chunk.js.map",
+    "static/js/2.cfdb2c71.chunk.js": "/Covid19MapStatistics/static/js/2.cfdb2c71.chunk.js",
+    "static/js/2.cfdb2c71.chunk.js.map": "/Covid19MapStatistics/static/js/2.cfdb2c71.chunk.js.map",
     "static/js/3.dea44266.chunk.js": "/Covid19MapStatistics/static/js/3.dea44266.chunk.js",
     "static/js/3.dea44266.chunk.js.map": "/Covid19MapStatistics/static/js/3.dea44266.chunk.js.map",
     "index.html": "/Covid19MapStatistics/index.html",
     "static/css/main.aec410b2.chunk.css.map": "/Covid19MapStatistics/static/css/main.aec410b2.chunk.css.map",
-    "static/js/2.73f60428.chunk.js.LICENSE.txt": "/Covid19MapStatistics/static/js/2.73f60428.chunk.js.LICENSE.txt",
+    "static/js/2.cfdb2c71.chunk.js.LICENSE.txt": "/Covid19MapStatistics/static/js/2.cfdb2c71.chunk.js.LICENSE.txt",
     "static/media/CoronaImage.9e5d4fc7.png": "/Covid19MapStatistics/static/media/CoronaImage.9e5d4fc7.png",
     "static/media/noimage.b95c1842.jpeg": "/Covid19MapStatistics/static/media/noimage.b95c1842.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.60ece46a.js",
-    "static/js/2.73f60428.chunk.js",
+    "static/js/2.cfdb2c71.chunk.js",
     "static/css/main.aec410b2.chunk.css",
-    "static/js/main.0f727ae2.chunk.js"
+    "static/js/main.53e549a0.chunk.js"
   ]
 }
