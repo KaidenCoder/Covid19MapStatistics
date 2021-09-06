@@ -16,7 +16,7 @@ A covid-19 web app where you can view data on continents, countries and on Map. 
 
 ## Overview
 
-It is a ReactJS Covid19 web app with multiples API endpoints generating global, continent, country, and news data. This data is representable visually on the front-end.
+It is a ReactJS Covid19 web app with multiples API endpoints generating global, continent, country, and news data. This data is representable visually on the front-end. News is generated from Guardian API.
 
 ### Screenshot
 
