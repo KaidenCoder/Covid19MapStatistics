@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { fetchCountriesData } from './utils/api'
+import { fetchCountriesData } from '../../utils/api'
 import NumberFormat from 'react-number-format';
 
 function MapD() {
-
     const [countryData, setCountryData] = useState([])
-
     useEffect(() => {
         const fetchCountAPI = async () => {
             const data = await fetchCountriesData()
             setCountryData(data)
         }
-
         fetchCountAPI()
     }, [setCountryData])
-
 
     return (
         <MapContainer center={[20.5937, 78.9629]} zoom={4} scrollWheelZoom={true}>
@@ -23,9 +19,7 @@ function MapD() {
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-
             {countryData.map((d, i) => (
-
                 <Marker
                     key={i}
                     position={[d.latitude, d.longitude]} >
@@ -38,9 +32,7 @@ function MapD() {
                         </div>
                     </Popup>
                 </Marker>
-
             ))}
-
         </MapContainer >
 
     )

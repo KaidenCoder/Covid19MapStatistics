@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { fetchCountriesData } from './utils/api'
+import { fetchCountriesData } from '../../utils/api'
 
 const CountryPicker = ({ handleCountryChange }) => {
     const [countryData, setCountryData] = useState([])
@@ -12,7 +12,6 @@ const CountryPicker = ({ handleCountryChange }) => {
 
         fetchCountAPI()
     }, [setCountryData])
-    console.log(countryData)
 
     return (
         <div>
@@ -24,10 +23,8 @@ const CountryPicker = ({ handleCountryChange }) => {
                         {countryData.map((country, i) =>
                             <option key={i} value={country.country}>{country.country}</option>
                         )}
-
                     </select>
                 </div>
-
 
             </form>
         </div>

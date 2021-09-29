@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusCircle, faBriefcaseMedical, faSkullCrossbones, faAmbulance } from '@fortawesome/free-solid-svg-icons'
 import NumberFormat from 'react-number-format';
-import { fetchData } from './utils/api'
+import { fetchData } from '../../utils/api'
 
-const Cards = (props) => {
-
+const Cards = () => {
     const [dailyData, setDailyData] = useState([])
 
     useEffect(() => {
